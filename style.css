@@ -106,25 +106,15 @@ body{
     text-align: center;
 }
 
-#p1{
-    padding-top: 10px;
-    margin-right: 20em;
+.content p{
+    margin-left: 50px;
+    margin-right:50px;
     font-family: 'IM Fell English', serif;
     letter-spacing: 2px;
     font-size: 9 px;
     color: #ffff;
-    /*font-family: 'Reenie Beanie', cursive;
-    font-family: 'IM Fell English', cursive;*/
-}
-
-#p2{
-    margin-left: 20em;
-    text-align: right;
-    font-family: 'IM Fell English', serif;
-    letter-spacing: 2px;
-    font-size: 9 px;
-    color: #ffff;
-    /*font-family: 'Reenie Beanie', cursive;
+    /*font testing
+    font-family: 'Reenie Beanie', cursive;
     font-family: 'IM Fell English', cursive;*/
 }
 
