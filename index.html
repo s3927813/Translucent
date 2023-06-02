@@ -45,17 +45,24 @@
             </p>
           </div>
           </div>
-        </div>
-    
- 
-        
-          
-    
-        
-        
-      
-    
-        
+            <div class="content2"> 
+            <h1>Complete Text:</h1>
+            <p>This interaction is built to follow the prompt: 'Translucent' and 'Agency'. During the design research phase, this work was greatly influenced by the 'glass morphism' After Effect animation trend. While creating the idea and studying on the site YouTube, I came across instructions for the glass morph effect. And, while the tutorials I discovered were mostly about After Effects, they encouraged me to design the first concept of what the interaction would be. </p>
+            <p>The central interaction is designed to allow others to interact with the clip element ‘button’--a cursor-controlled movable object– that act as a peeking or looking glass of a layer that otherwise is covered by an overlay semi-transparent layer.
+            </p>
+            <p >The first thing I did to start the interaction was to create a background layer and a mask element as the object. To create the mask, I explored W3Schools and StackOverflow since I am not that familiar with either HTML or CSS, moreover, javascript. I found two ways to implement the mask which were to create a mask image or use a clip path. 
+            </p>
+            <p>A mask image allowed me to make a radial gradient mask that made a transparent circle whilst covering the rest of the page with a semi-transparent gradient. Whilst exploring the mask image action, I also found the mix blend mode command to blend the mask and control the transparency options. Using a mask image was closer aesthetically to the vision I had in my head. However, even after weeks of trials, I did not find any way to connect the mask to a moveable object, especially since the mask itself covered the entire page, and moving it around will result in moving the entire background (clipped image) with it.
+            </p>
+            <p > The second option, the clip path, allowed me to make a clipping circle that I can move around and connect to javascript. However, since it is a clip and not a mask, I could not make the rest of the background layer semi-transparent.
+            </p>
+            <p>I chose to combine the clip path and the mix blend mode actions to tackle both of these issues. I kept the clip path I made as the main piece that users may move around and added an overlay layer to represent a semi-transparent backdrop picture underneath it. I also opted to place this text within the clip path so that users have a clear motive to move the element around in order to display the text beneath.
+            </p>
+            <p > Upon landing on the page, Users can see a peek of the heading title as a hint of layer and content underneath. As a respond to the prompt agency, a clear procedure is implemented in the whole interaction. When users hover over the element, the cursor changed to grab as a hint to click the element. While clicking the element, the element becomes a larger clip and the cursor changed again into a move cursor. The move cursor hint for the next part of the procedure: dragging the element around to reveal a clear image of the background and content. 
+            <p>As an aesthetic, the term "translucent" conjures up visions of etherealness and delicate appeal. It has a compelling charm that mixes transparency and subtlety. To adopt a translucent style in design, a gradient with delicate pastel colors is chosen to  
+            </p>
+          </div>
+        </div> 
     
     </body>
 </html>
