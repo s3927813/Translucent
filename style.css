@@ -1,0 +1,144 @@
+/*this is the styling for the gradient background that you can see through the transparent button, I decided to add an animation to the
+entire gradient to motivate users to drag the button around more and see how the gradient moves//
+
+// I chose these colors to induce a soft and tranquil feeling while interacting with the website. To me,  
+the word 'translucent' feels like something that is dreamy and soft so I want the colors to express that//
+
+// While creating this gradient, I did not know exactly how and what to animate so I just played around with the background size and
+position numbers until I get an animation that I like. I also wanted to make a looping animation that eases in and out so it feels smooth
+With more time, I would have researched more on how to make the radial animation loop to just keep getting bigger and bigger: have the colors change from inside the radial gradient into a loop.
+(I tried to create a similar effect by having the colors itself loop --have the most inner gradient color match the outer color-- but then doing that just made me realise that the logic doesnt work that way lol ;-; */
+
+body{
+    margin: 0;
+    background-image: url(bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .7;
+}
+
+.layer1{
+    margin:0;
+    margin-top: -20px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(237, 225, 179, 0.91);
+    mix-blend-mode: lighten;
+}
+
+.background {
+    margin: 0;
+    margin-top: -10px;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: radial-gradient(circle farthest-corner at 50% 50%, #E56F8E, #C8DE8D, #A7C7E2, #E5936F, #A48FCB);
+    background-size: 100% 100%;
+    animation: gradientAnimation 10s ease-in-out infinite;
+    clip-path: circle(75px /*at var(--x) var(--y)*/);
+  }
+
+.background:hover{
+    cursor: grab;
+}
+
+.background:active{
+    cursor:move;
+    clip-path: circle(220px at var(--x) var(--y));
+}
+
+  /*the first thing I did was to make this gradient, and then I researched a lot about clipping mask a layer and how to connect them to javascript so I can
+  connect the mask to a draggable button. I found this youtube tutorial and learned how to connect the clipping mask from there, later I  researched more on how
+  to create a dragggable element and applied that instead of the mouseover action on the youtube tutorial.
+  some relevant references:
+  youtube link: https://www.youtube.com/watch?v=DOaFni3hWcs 
+  another code I looked into: https://jsfiddle.net/uug5je6m/29/ ,  http://jsfiddle.net/m1erickson/pRzxt/ 
+  helped with my biggest problem which was finding out how to mask the gradient and whether or not I can create a transparent overlay: https://stackoverflow.com/questions/38329746/mask-div-using-css
+  w3schools: https://www.w3schools.com/howto/howto_js_draggable.asp, https://www.w3schools.com/css/css3_masking.asp
+  https://css-tricks.com/almanac/properties/m/mask-image/*/
+
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 50% 50%;
+      background-size: 300% 300%;
+    }
+    50% {
+      background-position: 50% 50%;
+      background-size: 100% 100%;
+    }
+    100% {
+      background-position: 50% 50%;
+      background-size: 300% 300%;
+    }
+  }
+
+/*to make text not selectable, learnt from w3schools*/
+.content{
+    -webkit-user-select: none; /* for browser Safari */
+    /*other browser types from w3schools*/
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.content h1{
+    color: #F7F5D7;
+    font-family: 'Silkscreen', cursive;
+    padding-top: calc(8px + 1.5625vw);
+    text-align: center;
+}
+
+
+.content h3{
+    margin-top:-15px;
+    color: #F7F5D7;
+    font-family: 'IM Fell English', cursive;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+.content h2{
+    margin-top: -15px;
+    color: #F7F5D7;
+    font-family: 'Silkscreen', cursive;
+    font-size: 30px;
+    text-align: center;
+}
+
+#p1{
+    padding-top: 10px;
+    margin-right: 20em;
+    font-family: 'IM Fell English', serif;
+    letter-spacing: 2px;
+    font-size: 9 px;
+    color: #ffff;
+    /*font-family: 'Reenie Beanie', cursive;
+    font-family: 'IM Fell English', cursive;*/
+}
+
+#p2{
+    margin-left: 20em;
+    text-align: right;
+    font-family: 'IM Fell English', serif;
+    letter-spacing: 2px;
+    font-size: 9 px;
+    color: #ffff;
+    /*font-family: 'Reenie Beanie', cursive;
+    font-family: 'IM Fell English', cursive;*/
+}
+
+
+ /*these are the mask I did not end up using
+ .mask{
+    position:absolute;
+    -webkit-mask-image: radial-gradient(circle, black 20%, rgba(0, 0, 0, 0.5) 50%);
+    mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+    mask-type: luminance;
+  }
+
+  .mask:active{
+    -webkit-mask-image: radial-gradient(circle, black 20%, rgba(0, 0, 0, 0.5) 10%);
+    mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+  }*/
+
