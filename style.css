@@ -118,6 +118,26 @@ body{
     font-family: 'IM Fell English', cursive;*/
 }
 
+/*with more time I would have created a row for the paragraoh so they can be read more easily, but because I am not able to do so, I decided to include the text under the central interaction*/
+
+.content2 h1{
+    color: gray;
+    font-family: 'Silkscreen', cursive;
+    padding-top: calc(8px + 1.5625vw);
+    text-align: center;
+}
+
+.content2 p{
+    padding:10px;
+    margin-left: 150px;
+    margin-right:150px;
+    font-family: 'IM Fell English', serif;
+    letter-spacing: 2px;
+    font-size: 9 px;
+    color: grey;
+    /*font-family: 'Reenie Beanie', cursive;
+    font-family: 'IM Fell English', cursive;*/
+}
 
  /*these are the mask I did not end up using
  .mask{
