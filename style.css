@@ -109,9 +109,8 @@ body{
 .content p{
     margin-left: 50px;
     margin-right:50px;
-    font-family: 'IM Fell English', serif;
     letter-spacing: 2px;
-    font-size: 9 px;
+    font-size: 8 px;
     color: #ffff;
     /*font testing
     font-family: 'Reenie Beanie', cursive;
@@ -131,7 +130,6 @@ body{
     padding:10px;
     margin-left: 150px;
     margin-right:150px;
-    font-family: 'IM Fell English', serif;
     letter-spacing: 2px;
     font-size: 9 px;
     color: grey;
